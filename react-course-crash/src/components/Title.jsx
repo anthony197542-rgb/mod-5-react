@@ -1,6 +1,6 @@
 Function Title() {
 
-return   <h1>My Todo List</h1>
+return   <h1>My Todo List</h1>;
 }
 
-export default Title
+export default Title;
