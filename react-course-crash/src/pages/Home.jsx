@@ -4,7 +4,7 @@ import axios from 'axios'
 function Home() {
     const [users, setUsers] = useState([])
 
-     async function fetchusers() {
+     async function() {
    const {data} = await axios.get(
     "https://jsonplaceholder.typicode.com/users"
    );
@@ -16,10 +16,9 @@ function Home() {
         fetchUsers();
         }, []);
        
-    }, [])
     return (
     <div>
-        {users.leght > 0
+        {users.lenght > 0
         ?  <h1>{users[0]?.name}</h1>
         : <h1>Loading...</h1>
         }

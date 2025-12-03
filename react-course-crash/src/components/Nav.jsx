@@ -8,6 +8,6 @@ function Nav() {
             <Link to="/user/messi">Messi</Link>
             <Link to="/user/br4gg">David Bragg</Link>
         </nav>
-    )
+    );
 }
 export default Nav;
