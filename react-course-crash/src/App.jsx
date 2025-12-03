@@ -1,29 +1,21 @@
 import "./App.css";
-import Todo from "./components/Todo.jsx";
-import Title from "./components/Title.jsx";
-import Modal from './components/Modal.jsx'
-
+import {BrowserRouter as Router, Routes, Route, } from 'react-router-dom'
+imoprt Home from './pages/Home.jsx'
+import About from "./pages/About";
+import Contact from "./pages/Contact";
+import Users from "./pages/Users";
 
 function App() {
   return (
-    <div>
-       <Title />
-       <div className="todo__wrqpper">
-       <Todo
-        title="Finish Frontend Simplified" 
-        paragraph="Code anlong with Frontend Simplified step by step."
-         />
-      <Todo
-       title="Finish the interview section" 
-      paragraph="Finish every interview question in the next 6 weeks."
-      />
-       <Todo
-        title="Land a $100k job" 
-        paragraph="Apply to 100 Jobs" />
- </div>
-{/*} <Modal title="Are you want to delete?" /> */}
+    <Router>
 
-</div>
+    <Nav />
+    <Routes>
+      <Route path="/" elements={<Home />} />
+      <Route path="/Users/:username" element={Users />} />
+    <Routes>
+  </Router>
+
   );
 }
 
