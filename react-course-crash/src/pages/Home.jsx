@@ -1,17 +1,29 @@
 import React, { useEffect, useState } from "react";
-imprt axios from 'axios'
+import axios from 'axios'
 
 function Home() {
     const [users, setUsers] = useState([])
-     async function main() {
-   const {data} = await axios.get("https://jsonplaceholder.typicode.com/users"))
+
+     async function fetchusers() {
+   const {data} = await axios.get(
+    "https://jsonplaceholder.typicode.com/users"
+   );
    setUsers(data)
         }
 
     useEffect(() => {
-       fetchUsers();
+      
+        fetchUsers();
+        }, []);
+       
     }, [])
-    return <h1>{users[0]?.name}</h1>;
-
+    return (
+    <div>
+        {users.leght > 0
+        ?  <h1>{users[0]?.name}</h1>
+        : <h1>Loading...</h1>
+        }
+        </div>
+    );
 }
 export default Home;
