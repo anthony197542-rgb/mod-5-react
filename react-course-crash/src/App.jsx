@@ -12,10 +12,10 @@ function App() {
       <Nav />
     <Routes>
       <Route path="/" elements={<Home />} />
-      <Route path="/Users/:username" element={Users />} />
+      <Route path="/Users/:username" element={<Users />} />
        <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
-    <Routes>
+    </Routes>
   </Router>
 
   );

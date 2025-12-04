@@ -10,7 +10,7 @@ function Modal ({title, cancelModal, confirmModal}) {
                   >
                     Cancel
                     </button> 
-                <button onclick={confirmModal}"btn">
+                <button onclick={confirmModal}
                   Confirm
                   </button>
                 </div>

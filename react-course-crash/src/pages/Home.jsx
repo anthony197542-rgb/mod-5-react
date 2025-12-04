@@ -4,7 +4,7 @@ import axios from 'axios'
 function Home() {
     const [users, setUsers] = useState([])
 
-     async function() {
+     async function fetchUsers() {
    const {data} = await axios.get(
     "https://jsonplaceholder.typicode.com/users"
    );
@@ -13,12 +13,13 @@ function Home() {
 
     useEffect(() => {
       
-        fetchUsers();
+        fetchusers();
         }, []);
        
+
     return (
     <div>
-        {users.lenght > 0
+        {users.length > 0
         ?  <h1>{users[0]?.name}</h1>
         : <h1>Loading...</h1>
         }
